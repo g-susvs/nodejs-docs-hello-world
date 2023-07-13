@@ -23,7 +23,7 @@ stages:
   - job: Build
     displayName: Build
     pool:
-      name: SAMPLE-POOL
+      name: my_agent_pool
   
     steps:
     - task: NodeTool@0
@@ -58,7 +58,7 @@ stages:
     displayName: Deploy
     environment: $(environmentName)
     pool: 
-      name: SAMPLE-POOL
+      name: my_agent_pool
     strategy:
       runOnce:
         deploy:
